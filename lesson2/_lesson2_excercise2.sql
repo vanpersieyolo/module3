@@ -1,4 +1,4 @@
-create database Excercise2;
+-- create database Excercise2;
 
 create table customers(
 customerNumber int primary key ,
@@ -12,7 +12,9 @@ city varchar(50) not null,
 state varchar (50) not null,
 postalCode varchar(50) not null,
 contry varchar(50) not null,
-creditLimit float
+creditLimit float,
+salesRepEmployeeNumber int ,
+foreign key (salesRepEmployeeNumber) references employees(employeeNumber)
 );
 
 create table orders(
@@ -28,11 +30,10 @@ customerNumber int,
 foreign key(customerNumber) references customers(customerNumber)
 );
 create table payment(
-customerNumber varchar(50) not null,
+customerNumber int not null,
 chekNumber varchar(50) not null,
 paymentDate date not null,
 amount double not null,
-customerNumber int,
 foreign key(customerNumber) references customers(customerNumber)
 );
 create table products(
@@ -43,7 +44,9 @@ productVendor varchar(50) not null,
 productDecriptioon text not null,
 quantityInStock int not null,
 buyPrice double not null,
-MSRP double not null
+MSRP double not null,
+productLine varchar(50),
+foreign key(productLine) references productlines (productLine)
 );
 create table productlines(
 productLine varchar(50) primary key,
@@ -56,7 +59,10 @@ employeeNumber int primary key,
 lastName varchar(50)not null,
 firstName varchar(50)not null,
 email varchar(100)not null,
-jobTitle varchar(50)not null
+jobTitle varchar(50)not null,
+reportTo varchar(10),
+officeCode varchar(10),
+foreign key (officeCode) references offices(officeCode)
 );
 create table offices(
 officeCode varchar(10) primary key,
@@ -68,3 +74,10 @@ state varchar(50)not null,
 country varchar(50)not null,
 postalCode varchar(15)not null
 );
+create table OrderDetails(
+productCode varchar(15) not null,
+orderNumber int not null,
+foreign key(productCode) references products(productCode),
+foreign key (orderNumber) references orders(orderNumber)
+);
+select * from customers
