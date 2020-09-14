@@ -1,17 +1,36 @@
 
-.topnav {
-    background-color:black;
-    overflow: hidden;
+/*.topnav {*/
+/*    background-color:black;*/
+/*    overflow: hidden;*/
+/*}*/
+/*.topnav a {*/
+/*    float: left;*/
+/*    color: #f2f2f2;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    font-size: 17px;*/
+/*}*/
+/*.topnav a:hover {*/
+/*    background-color: red;*/
+/*    color: black;*/
+/*}*/
+/*body{*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+.img{
+    position: relative;
+    width: 764px;
 }
-.topnav a {
-    float: left;
-    color: #f2f2f2;
+.img h2{
+    margin: 10px;
+    background-color: rgba(1,1,1,0.5);
+    height: 20%;
+    line-height: 80px;
+    width: 100%;
+    color: rebeccapurple;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.topnav a:hover {
-    background-color: red;
-    color: black;
+    position: absolute;
+    bottom : 10px;
+    font-size: 100px;
 }

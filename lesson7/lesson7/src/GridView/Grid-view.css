@@ -1,0 +1,62 @@
+.conten-1 {
+    width: 8.33%;
+    height: 100%;
+}
+
+.conten-2 {
+    width: 16.66%;
+    height: 100%;
+}
+
+.conten-3 {
+    width: 25%;
+    height: 100%;
+}
+
+.conten-4 {
+    width: 33.33%;
+    height: 100%;
+}
+
+.conten-5 {
+    width: 41.66%;
+    height: 100%;
+}
+
+.conten-6 {
+    width: 50%;
+    height: 100%;
+}
+
+.conten-7 {
+    width: 58.33%;
+    height: 100%;
+}
+
+.conten-8 {
+    width: 66.66%;
+    height: 100%;
+}
+
+.conten-9 {
+    width: 75%;
+    height: 100%;
+}
+
+.conten-10 {
+    width: 83.33%;
+    height: 100%;
+}
+
+.conten-11 {
+    width: 91.66%;
+    height: 100%;
+}
+
+.conten-12 {
+    width: 100%;
+    height: 100%;
+}
+#content{
+    border: black solid 1px;
+}
