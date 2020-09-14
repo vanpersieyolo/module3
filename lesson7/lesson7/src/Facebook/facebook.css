@@ -6,7 +6,8 @@
     width: 100%;
     height: 50px;
     z-index: 1;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    border: blue solid 1px;
 }
 
 #status {
@@ -61,7 +62,7 @@
     font-size: large;
 }
 #postMain{
-    background-color: slategray;
+    background-color: cornflowerblue;
     width: 90%;
     height: 250px;
     border-bottom-right-radius: 25px;
@@ -83,6 +84,9 @@
     font-weight: bold ;
     float: left;
 }
+#itemFB:hover {
+    background: cornflowerblue;
+}
 #search {
     width: 350px;
     height: 35px;
@@ -96,7 +100,6 @@
     float: left;
 }
 #miniAvatar{
-
     float: left;
     width: 30px;
     height: 30px;
@@ -105,19 +108,24 @@
     border-radius: 50%;
     background: #f2f2f2;
 }
+#miniAvatar:hover{
+    background: cornflowerblue;
+}
 #name{
+    color: white;
     float: left;
     margin-left: 20px;
     margin-top: 12px;
 }
 #name:hover{
-    background: white;
+    background: cornflowerblue;
 }
 #trangchu{
+    color: white;
     float: left;
     margin-left: 30px;
     margin-top: 12px;
 }
 #trangchu:hover{
-    background: white;
+    background:cornflowerblue;
 }

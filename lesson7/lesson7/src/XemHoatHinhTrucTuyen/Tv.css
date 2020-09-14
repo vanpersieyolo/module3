@@ -1,0 +1,51 @@
+#header{
+    width: 100%;
+    height: 60px;
+    background: dimgray;
+}
+#img{
+    width: 20%;
+    height: 60px;
+}
+
+#head-link{
+    width: 100%;
+    height: 40px;
+    background: dimgray;
+    margin-top: 10px;
+    text-align: center;
+}
+#head-link ul{
+    list-style-type: none;
+    width: 100%;
+}
+#head-link li{
+    color: #f1f1f1;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+}
+#head-link li:hover {
+    background: cornflowerblue;
+}
+#left-content{
+    width: 25%;
+    height: 100%;
+    background: dimgray;
+    margin-top: 5px ;
+}
+#left-content img{
+    width: 430px;
+    margin: 20px;
+    height: 300px;
+}
+#left-content p {
+    margin-top: 0px;
+    text-indent: 40px;
+}
+#left-content p:hover{
+    background: cornflowerblue;
+}
