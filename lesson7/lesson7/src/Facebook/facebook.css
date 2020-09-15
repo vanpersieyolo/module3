@@ -93,6 +93,7 @@
     float: left;
     margin-left: 50px;
     margin-top: 5px;
+    border-radius: 25px;
 }
 #switchSearch{
     margin-top: 13px;

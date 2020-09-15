@@ -2,17 +2,20 @@
     width: 100%;
     height: 60px;
     background: dimgray;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    clear: both;
 }
 #img{
     width: 20%;
     height: 60px;
 }
-
 #head-link{
     width: 100%;
     height: 40px;
     background: dimgray;
-    margin-top: 10px;
+    margin-top: 70px;
     text-align: center;
 }
 #head-link ul{
@@ -20,7 +23,7 @@
     width: 100%;
 }
 #head-link li{
-    color: #f1f1f1;
+    color: white;
     display: inline-block;
     width: 200px;
     height: 40px;
@@ -35,7 +38,8 @@
     width: 25%;
     height: 100%;
     background: dimgray;
-    margin-top: 5px ;
+    margin-top: 10px ;
+    float: left;
 }
 #left-content img{
     width: 430px;
@@ -46,6 +50,21 @@
     margin-top: 0px;
     text-indent: 40px;
 }
-#left-content p:hover{
+#left-content p:hover {
     background: cornflowerblue;
+}
+#right-content{
+    width: 74%;
+    height: 1500px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#right-content img{
+    width: 1300px;
+    height: 800px;
+}
+#mainImg{
+    font-size: 40px;
+    background-color: rgba(255,255,255,0.5);
 }
