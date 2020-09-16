@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dde3923-7dda-4842-9e4f-d7fc9fc633e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson5/_lesson5_practive1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson5/_lesson5_practive2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson5/_lesson5_practive3.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson2/_lesson2_excercise2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/_lesson2_excercise2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tổng hợp.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/tổng hợp.xlsx" afterDir="false" />
+    <list default="true" id="5a32b79f-0798-460c-b356-792637430e62" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Baitap_module3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1hLn2jYDlfTfVqxshF4q32RZudw" />
+  <component name="ProjectId" id="1hbCr9jvJTq96MU6xeOn7k6IAeq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,23 +25,30 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2dde3923-7dda-4842-9e4f-d7fc9fc633e0" name="Default Changelist" comment="" />
-      <created>1599799034555</created>
+      <changelist id="5a32b79f-0798-460c-b356-792637430e62" name="Default Changelist" comment="" />
+      <created>1600270600777</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599799034555</updated>
-      <workItem from="1599799036160" duration="11000" />
+      <updated>1600270600777</updated>
+      <workItem from="1600270604603" duration="29000" />
+      <workItem from="1600270655072" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600270688953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600270688953" />
   </component>
 </project>
