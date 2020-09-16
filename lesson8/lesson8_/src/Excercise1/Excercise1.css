@@ -1,15 +1,6 @@
-body h1 , h4{
+body h1 , h4 {
     font-family: "Times New Roman";
     margin-top: 20px;
     text-indent: 10px;
     font-weight: bold;
-}
-.col-xs-12:hover{
-    border: red solid 1px;
-}
-.col-sm-6:hover{
-    border: red solid 1px;
-}
-.col-md-3:hover{
-    border: red solid 1px;
 }
