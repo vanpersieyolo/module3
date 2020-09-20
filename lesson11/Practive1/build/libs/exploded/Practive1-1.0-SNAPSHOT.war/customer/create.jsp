@@ -21,7 +21,7 @@
 <h1>Create new customer</h1>
 <p>
     <c:if test='${requestScope["message"] != null}'>
-        <span class="message">${requestScope["mess  age"]}</span>
+        <span class="message">${requestScope["message"]}</span>
     </c:if>
 </p>
 <p>
