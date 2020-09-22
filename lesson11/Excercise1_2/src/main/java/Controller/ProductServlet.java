@@ -2,7 +2,6 @@ package Controller;
 
 import Model.Product;
 import Service.ProductService;
-import jdk.nashorn.internal.ir.RuntimeNode;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,10 +28,8 @@ public class ProductServlet extends javax.servlet.http.HttpServlet {
             case "edit":
                 edit(request,response);
                 break;
-
         }
     }
-
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) {
         String action = request.getParameter("action");
         if (action == null){
@@ -112,7 +109,13 @@ public class ProductServlet extends javax.servlet.http.HttpServlet {
         }
     }
     public static void showEdit(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response){
+        ProductService ps = new ProductService();
         int id = Integer.parseInt(request.getParameter("id"));
+        String oldName = ps.findById(id).getName();
+        request.setAttribute("oldName",oldName);
+        String oldDescription = ps.findById(id).getDescription();
+        request.setAttribute("oldDescription",oldDescription);
+        request.setAttribute("id",id);
         RequestDispatcher rq = request.getRequestDispatcher("/Views/ViewEdit.jsp");
         try {
             rq.forward(request, response);
@@ -127,7 +130,7 @@ public class ProductServlet extends javax.servlet.http.HttpServlet {
         int idInput = Integer.parseInt(request.getParameter("id"));
         String nameInput = request.getParameter("name");
         String description = request.getParameter("description");
-        ps.edit(idInput,idInput,nameInput,description);
+        ps.edit(idInput,nameInput,description);
         request.setAttribute("product",ProductService.products);
         RequestDispatcher rq = request.getRequestDispatcher("/Views/ViewEdit.jsp");
         try {

@@ -36,10 +36,9 @@ public class ProductService implements IProduct {
     }
 
     @Override
-    public void edit(int id, int newID, String newName,String newDescription) {
+    public void edit(int id, String newName,String newDescription) {
         for (Product product: products) {
             if (product.getId()==id){
-                product.setId(newID);
                 product.setName(newName);
                 product.setDescription(newDescription);
             }

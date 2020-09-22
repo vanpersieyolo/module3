@@ -16,9 +16,9 @@
 <body>
     <div class="container-fuild">
         <form action="/product?action=edit"method="post">
-            <input type="text" name="id">
-            <input type="text" name="name">
-            <input type="text" name="description">
+            <input type="text" name="id" value="${id}" hidden>
+            <input type="text" name="name" value="${oldName}">
+            <input type="text" name="description" value="${oldDescription}">
             <button type="submit" class="btn btn-dark">Thay đổi</button>
         </form>
     </div>

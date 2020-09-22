@@ -22,6 +22,13 @@
 <div align="center">
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
+        <div>
+            <form action="/users?action=search" method="post">
+                <input type="text" name="search">
+                <button type="submit">search</button>
+            </form>
+            <a href="/users?action=sort">sort</a>
+        </div>
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -41,6 +48,7 @@
                 </td>
             </tr>
         </c:forEach>
+
     </table>
 </div>
 </body>
