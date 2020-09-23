@@ -40,7 +40,6 @@ public class UserServlet extends HttpServlet {
                 case "search":
                     searchBy(request,response);
                     break;
-
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -70,11 +69,24 @@ public class UserServlet extends HttpServlet {
                 default:
                     listUser(request, response);
                     break;
+                case "permision":
+                    addUserPermision(request, response);
+                    break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
     }
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+
+        User user = new User("kien", "kienhoang@gmail.com", "vn");
+
+        int[] permision = {1, 2, 4};
+
+        userDAO.addUserTransaction(user, permision);
+
+    }
+
     private void sort(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         List<User> listUser = userDAO.sortName();
         request.setAttribute("listUser",listUser);
@@ -112,7 +124,8 @@ public class UserServlet extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userDAO.selectUser(id);
+//        User existingUser = userDAO.selectUser(id);
+        User existingUser = userDAO.getUserById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
@@ -125,7 +138,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userDAO.insertUser(newUser);
+        userDAO.insertUserStore(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         dispatcher.forward(request, response);
     }
@@ -155,10 +168,7 @@ public class UserServlet extends HttpServlet {
     }
     private void search (HttpServletRequest request, HttpServletResponse response)throws SQLException, IOException, ServletException {
         RequestDispatcher dispatcher;
-        if (request.getParameter("search").equals("")){
-            response.sendRedirect("/users");
-            return;
-        }
+
             String country = request.getParameter("search");
             List<User> users = new ArrayList();
             users.add(userDAO.searchByCountry(country));

@@ -23,7 +23,7 @@
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
         <div>
-            <form action="/users?action=search" method="post">
+            <form method="post" action="/users?action=search">
                 <input type="text" name="search">
                 <button type="submit">search</button>
             </form>
