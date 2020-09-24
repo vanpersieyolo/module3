@@ -1,10 +1,12 @@
 package dao;
 
+import com.mysql.fabric.xmlrpc.base.Struct;
 import model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.Callable;
 
 public class UserDAO implements IUserDAO {
@@ -214,40 +216,25 @@ public class UserDAO implements IUserDAO {
                     pstmtAssignment.setInt(2, permisionId);
 
                     pstmtAssignment.executeUpdate();
-
                 }
-
                 conn.commit();
 
             } else {
-
                 conn.rollback();
-
             }
 
         }catch (SQLException ex) {
-
             // roll back the transaction
-
             try {
-
                 if (conn != null)
-
                     conn.rollback();
-
             } catch (SQLException e) {
-
                 System.out.println(e.getMessage());
-
             }
-
             System.out.println(ex.getMessage());
-
         }
         finally {
-
             try {
-
                 if (rs != null) rs.close();
 
                 if (pstmt != null) pstmt.close();
@@ -261,6 +248,55 @@ public class UserDAO implements IUserDAO {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    @Override
+    public List<User>   showAll() {
+        User user = null;
+        String query = "{CALL show_all()}";
+        List<User> users = new ArrayList<>();
+
+        try(Connection connection = getConnection(); CallableStatement callableStatement = connection.prepareCall(query)) {
+            ResultSet rs = callableStatement.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String country = rs.getString("country");
+                String email = rs.getString("email");
+                user = new User(id,name,email,country);
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
+
+    @Override
+    public boolean fixInfor(User user) throws SQLException {
+        boolean updated = false;
+        String query = "{call update_infor(?,?,?,?)};";
+        Connection connection = getConnection(); CallableStatement callableStatement = connection.prepareCall(query);
+        callableStatement.setInt(1, user.getId());
+        callableStatement.setString(2, user.getName());
+        callableStatement.setString(3, user.getEmail());
+        callableStatement.setString(4, user.getCountry());
+        updated = callableStatement.executeUpdate()>0;
+            return updated;
+    }
+    @Override
+    public boolean removeUser(int id) throws SQLException {
+        boolean rowDelete;
+        String query = "{call delete_user(?)};";
+        try (Connection connection = getConnection(); CallableStatement callableStatement = connection.prepareCall(query)){
+            ResultSet resultSet = callableStatement.getResultSet();
+            while (resultSet.next()){
+                try(Connection conn = getConnection()) {
+
+                }
+            }
+        }
+        return false;
     }
 
     private void printSQLException(SQLException ex) {

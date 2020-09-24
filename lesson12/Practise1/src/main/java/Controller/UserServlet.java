@@ -98,7 +98,7 @@ public class UserServlet extends HttpServlet {
         List<User> list = new ArrayList<>();
         String search = request.getParameter("search");
         for (User user: listUser){
-            if (user.getName().contains(search) || user.getEmail().contains(search) || user.getCountry().contains(search)){
+                if (user.getName().contains(search) || user.getEmail().contains(search) || user.getCountry().contains(search)){
                 list.add(user);
             }
         }
@@ -109,7 +109,7 @@ public class UserServlet extends HttpServlet {
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        List<User> listUser = userDAO.selectAllUsers();
+        List<User> listUser = userDAO.showAll();
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
@@ -150,8 +150,8 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
 
-        User book = new User(id, name, email, country);
-        userDAO.updateUser(book);
+        User user = new User(id, name, email, country);
+        userDAO.fixInfor(user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         dispatcher.forward(request, response);
     }

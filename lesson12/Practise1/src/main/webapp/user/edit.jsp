@@ -20,7 +20,7 @@
     </h2>
 </center>
 <div align="center">
-    <form method="post" action="/users?action=create">
+    <form method="post" action="/users?action=edit">
         <table border="1" cellpadding="5">
             <caption>
                 <h2>
